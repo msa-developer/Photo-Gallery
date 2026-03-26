@@ -1,28 +1,26 @@
-import React, { useEffect } from "react";
-import axios from 'axios'
-import {message} from 'antd'
+import axios from "axios";
+import { message } from "antd";
 
 const Button = () => {
-    
-  const handleChange =async (e) => {
+  const handleChange = async (e) => {
     try {
-        e.preventDefault();
-        console.log('e',e.target.files);
+      e.preventDefault();
+      console.log("e", e.target.files);
 
-    const formData=new FormData();
-    formData.append('photo', e.target.files[0])
+      const formData = new FormData();
+      formData.append("photo", e.target.files[0]);
 
-    let res=await axios.post('https://photo-gallery-1.onrender.com/save', formData)
-    // console.log(res.data);
-    message.success(res.data.message)
-    window.location.reload()
-
-
+      let res = await axios.post(
+        "https://photo-gallery-1.onrender.com/save",
+        formData,
+      );
+      // console.log(res.data);
+      message.success(res.data.message);
+      window.location.reload();
     } catch (error) {
-        console.log(error);
-        message.error(`${error}`)
+      console.log(error);
+      message.error(`${error}`);
     }
-
   };
 
   // useEffect(()=>{
@@ -42,7 +40,7 @@ const Button = () => {
           type="file"
           name="file_picker"
           id="file_picker"
-          onChange={(e) => handleChange(e) }
+          onChange={(e) => handleChange(e)}
         />
       </label>
     </>
