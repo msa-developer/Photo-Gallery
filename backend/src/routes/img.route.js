@@ -11,7 +11,7 @@ const imgRouter = express.Router();
 const upload = multer({ dest: "uploads/" });
 
 imgRouter.get("/", getAllImages);
-imgRouter.post("/add", upload, AddImages);
+imgRouter.post("/add", upload.single("image"), AddImages);
 imgRouter.delete("/:id", DeleteImg);
 
 export default imgRouter;
