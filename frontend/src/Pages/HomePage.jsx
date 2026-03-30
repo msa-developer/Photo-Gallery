@@ -21,9 +21,7 @@ const HomePage = () => {
             </figure>
 
             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300 ">
-              <button className="bg-red-500 text-white cursor-pointer px-3 py-1 rounded">
-                Delete
-              </button>
+              <button className="btn btn-secondary">Delete</button>
             </div>
           </div>
         ))
