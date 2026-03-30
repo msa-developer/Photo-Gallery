@@ -15,7 +15,10 @@ const useZustand = create((set, get) => ({
 
   uploadImg: async (data) => {
     try {
-      const res = await axiosInstance.post("/", data);
+      const res = await axiosInstance.post("/add", data, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      set((state) => ({ images: [res.data.image, ...state.images] }));
     } catch (error) {
       console.error(error);
     }

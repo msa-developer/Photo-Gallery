@@ -1,8 +1,8 @@
 import Image from "../Modals/Image.js";
 
-export const getAllImages = async (req, res) => {
+export const getAllImages = async (_, res) => {
   try {
-    const img = await Image.find();
+    const img = await Image.find().sort({ createdAt: -1 });
     res.status(200).json(img);
   } catch (error) {
     console.error(error);

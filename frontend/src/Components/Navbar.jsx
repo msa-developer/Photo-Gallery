@@ -8,10 +8,23 @@ const Navbar = () => {
     getAllImages();
   });
 
+  const ref = React.useRef();
+
+  const uploadImg = async () => {};
+
   return (
-    <div className="navbar bg-primary text-primary-content rounded-2xl">
-      <button className="btn btn-ghost text-xl">Upload</button>
-      images:{images.length}
+    <div className="navbar bg-primary text-primary-content rounded-2xl flex justify-around">
+      <input type="file" className="hidden" ref={ref} />
+      <button className="btn btn-ghost text-xl" onClick={ref.current.onClick()}>
+        Upload
+      </button>
+
+      <div>
+        <span className="text-xl">
+          Images:
+          {images.length}
+        </span>
+      </div>
     </div>
   );
 };
