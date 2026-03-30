@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import axiosInstance from "../lib/axiosInstance";
+import toast from "react-hot-toast";
 
 const useZustand = create((set, get) => ({
   images: [],
@@ -19,8 +20,10 @@ const useZustand = create((set, get) => ({
         headers: { "Content-Type": "multipart/form-data" },
       });
       set((state) => ({ images: [res.data.image, ...state.images] }));
+      toast.success(response?.data?.message);
     } catch (error) {
       console.error(error);
+      toast.success(response?.data?.message);
     }
   },
 

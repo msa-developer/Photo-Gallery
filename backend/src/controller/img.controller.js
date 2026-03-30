@@ -12,10 +12,9 @@ export const getAllImages = async (_, res) => {
 
 export const AddImages = async (req, res) => {
   try {
-    const path = req.file.path;
+    console.log(req.file);
     const image = new Image({
-      title,
-      imagePath: path,
+      imagePath: req.file.buffer.toString("base64"),
     });
     await image.save();
     res.status(201).json({ message: "Image Added Successfully" });
