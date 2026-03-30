@@ -12,6 +12,6 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 imgRouter.get("/", getAllImages);
 imgRouter.post("/add", upload.single("image"), AddImages);
-imgRouter.delete("/:id", DeleteImg);
+imgRouter.delete("/delete/:id", DeleteImg);
 
 export default imgRouter;

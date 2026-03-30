@@ -1,7 +1,7 @@
 import useZustand from "../zustand/zustand";
 
 const HomePage = () => {
-  const { images } = useZustand();
+  const { images, DelImg } = useZustand();
 
   return (
     <div className="m-3 p-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 overflow-hidden">
@@ -21,7 +21,12 @@ const HomePage = () => {
             </figure>
 
             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300 ">
-              <button className="btn btn-secondary">Delete</button>
+              <button
+                className="btn btn-secondary"
+                onClick={() => DelImg(img._id)}
+              >
+                Delete
+              </button>
             </div>
           </div>
         ))

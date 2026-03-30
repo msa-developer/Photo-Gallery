@@ -11,6 +11,7 @@ const useZustand = create((set, get) => ({
       set((state) => ({ images: [...state.images, ...res.data] }));
     } catch (error) {
       console.error(error);
+      toast.success(res?.data?.message);
     }
   },
 
@@ -20,19 +21,24 @@ const useZustand = create((set, get) => ({
         headers: { "Content-Type": "multipart/form-data" },
       });
       set((state) => ({ images: [res.data.image, ...state.images] }));
-      toast.success(response?.data?.message);
+      toast.success(res?.data?.message);
     } catch (error) {
       console.error(error);
-      toast.success(response?.data?.message);
+      toast.error(error?.response?.data?.message);
     }
   },
 
   DelImg: async (id) => {
     try {
-      await axiosInstance.delete(`/{id}`);
-      set((state) => ({ image: state.images.filter((img) => img._id !== id) }));
+      const res = await axiosInstance.delete(`/delete/${id}`);
+      set((state) => ({
+        images: state.images.filter((img) => img._id !== id),
+      }));
+
+      toast.success(res?.data?.message);
     } catch (error) {
       console.error(error);
+      toast.error(error?.response?.data?.message);
     }
   },
 }));
