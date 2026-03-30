@@ -12,7 +12,6 @@ export const getAllImages = async (_, res) => {
 
 export const AddImages = async (req, res) => {
   try {
-    const { title } = req.body;
     const path = req.file.path;
     const image = new Image({
       title,
