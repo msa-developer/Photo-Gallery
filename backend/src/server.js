@@ -10,18 +10,20 @@ dotenv.config({ quiet: true });
 const app = express();
 
 app.use(express.json());
-
 const __dirname = path.resolve();
 
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-  }),
-);
+if (process.env.NODE_ENV === "development") {
+  app.use(
+    cors({
+      origin: "http://localhost:5173",
+    }),
+  );
+}
 
 app.use("/api", imgRouter);
 
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
 if (process.env.NODE_ENV === "production") {
   app.get("*", (_, res) =>
     res.send(path.join(__dirname, "../frontend", "dist", "index.html")),
