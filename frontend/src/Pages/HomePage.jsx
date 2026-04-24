@@ -4,7 +4,7 @@ const HomePage = () => {
   const { images, DelImg } = useZustand();
 
   return (
-    <div className="min-h-screen bg-base-200 p-4 md:p-8">
+    <div className="bg-base-200 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Optional: A nice header for the gallery */}
         <div className="text-center mb-8">

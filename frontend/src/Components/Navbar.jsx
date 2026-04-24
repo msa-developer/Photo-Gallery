@@ -6,7 +6,7 @@ const Navbar = () => {
 
   React.useEffect(() => {
     getAllImages();
-  }, [getAllImages]);
+  }, []);
 
   const refInput = React.useRef();
 
@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar sticky top-4 z-50 mx-4 mt-4 max-w-7xl lg:mx-auto rounded-2xl bg-primary/80 backdrop-blur-md shadow-lg border border-primary-content/20">
+    <div className="navbar sticky top-4 z-50 mt-4 max-w-7xl mx-auto rounded-2xl bg-primary/80 backdrop-blur-md shadow-lg border border-primary-content/20">
       <div className="navbar-start">
         {/* App Logo / Brand */}
         <a className="btn btn-ghost text-xl text-primary-content gap-2">

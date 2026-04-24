@@ -11,7 +11,7 @@ const useZustand = create((set, get) => ({
       set((state) => ({ images: [...state.images, ...res.data] }));
     } catch (error) {
       console.error(error);
-      toast.success(res?.data?.message);
+      toast.success(error?.response?.data?.message);
     }
   },
 
