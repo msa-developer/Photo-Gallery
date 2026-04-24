@@ -27,7 +27,7 @@ export const AddImages = async (req, res) => {
 export const DeleteImg = async (req, res) => {
   try {
     await Image.findByIdAndDelete(req.params.id);
-    res.status({ message: "Image Deleted Successfully" });
+    res.status(200).json("Deleted Successfully");
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error in DeleteImg function" });

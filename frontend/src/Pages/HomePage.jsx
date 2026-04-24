@@ -16,7 +16,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        {images.length === 0 ? (
+        {images?.length === 0 ? (
           <div className="flex flex-col items-center justify-center min-h-[50vh] text-base-content/50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const HomePage = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {images.map((img) => (
+            {images?.map((img) => (
               <div
                 key={img._id}
                 className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden rounded-2xl border border-base-300"
