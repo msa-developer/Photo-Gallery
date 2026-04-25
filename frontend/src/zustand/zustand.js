@@ -2,7 +2,7 @@ import { create } from "zustand";
 import axiosInstance from "../lib/axiosInstance";
 import toast from "react-hot-toast";
 
-const useZustand = create((set, get) => ({
+const useZustand = create((set) => ({
   images: [],
 
   getAllImages: async () => {
