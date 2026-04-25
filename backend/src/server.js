@@ -23,6 +23,13 @@ if (process.env.NODE_ENV === "development") {
 app.use("/api", imgRouter);
 
 if (process.env.NODE_ENV === "production") {
+  app.use(
+    "/.well-known",
+    express.static(path.join(__dirname, "../frontend/dist/.well-known"), {
+      dotfiles: "allow",
+    }),
+  );
+
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
   app.get(/.*/, (_, res) =>
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html")),
