@@ -1,10 +1,10 @@
 ========================================================================
-                      GARDEN GALLERY PROJECT DOCUMENTATION
+                      Photo GALLERY PROJECT DOCUMENTATION
 ========================================================================
 
 1. PROJECT OVERVIEW
 ------------------
-The Garden Gallery is a modern, responsive full-stack MERN application 
+The Photo Gallery is a modern, responsive full-stack MERN application 
 designed for personal photo management. It allows users to upload, view, 
 and delete images in a beautiful, masonry-style gallery interface. The 
 project focuses on simplicity, speed, and a clean user experience.
