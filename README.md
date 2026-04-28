@@ -129,7 +129,6 @@ A sticky, modern navigation bar with glassmorphism effects.
 
 ```
 
-```bash
 npm run build 
 npm run start
 ```
