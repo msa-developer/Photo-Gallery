@@ -127,39 +127,15 @@ A sticky, modern navigation bar with glassmorphism effects.
 - MongoDB (local or Atlas)
 - npm or yarn
 
-### Backend Setup
-```bash
-# 1. Navigate to the /backend folder
-cd backend
-
-# 2. Install dependencies
-npm install
-
-# 3. Configure .env with PORT and MONGO_URI
-cp .env.example .env
-# Edit .env and add:
-# PORT=5000
-# MONGO_URI=mongodb://localhost:27017/photo-gallery
-
-# 4. Start the server
-npm run dev
 ```
 
-### Frontend Setup
 ```bash
-# 1. Navigate to the /frontend folder
-cd frontend
-
-# 2. Install dependencies
-npm install
-
-# 3. Start the development server
-npm run dev
+npm run build 
+npm run start
 ```
 
 ### Access the Application
-- **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:5000
+- **Project Running on**: http://localhost:5000
 
 ---
 
