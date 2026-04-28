@@ -96,6 +96,7 @@ npm install
 # MONGO_URI=mongodb://localhost:27017/photo-gallery
 
 # 4. Start the server
+#do this in main folder
 npm run build
 npm run start
 ```
