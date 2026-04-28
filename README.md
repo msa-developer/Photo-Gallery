@@ -27,25 +27,25 @@ The **Photo Gallery** is a modern, responsive full-stack MERN application design
 
 ### 🏠 Home Page — Empty State
 <p><em>Clean, minimal interface welcoming users to upload their first photos</em></p>
-![HomePage](./images/home-page-gallery.png)
+<img src="images/home-page-gallery.png" alt="HomePage" width="800">
 
 <br><br>
 
 ### 🎨 Gallery View — Main Interface
 <p><em>Beautiful masonry grid showcasing uploaded images with the Garden theme</em></p>
-![gallery](./images/gallery.png)
+<img src="images/gallery.png" alt="gallery" width="800">
 
 <br><br>
 
 ### 🖼️ Full Image Grid
 <p><em>Responsive layout adapting to different screen sizes with smooth hover effects</em></p>
-![Image-gallery](./images/Image-gallery.png)
+<img src="images/Image-gallery.png" alt="Image-gallery" width="800">
 
 <br><br>
 
 ### 🗑️ Delete Option — Hover Action
 <p><em>Intuitive delete button appears on hover for quick image removal</em></p>
-![DeleteIcon](./images/with-delete-option.png)
+<img src="images/with-delete-option.png" alt="DeleteIcon" width="800">
 
 </div>
 
