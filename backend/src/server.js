@@ -4,6 +4,7 @@ import connectDB from "./config/db.js";
 import imgRouter from "./routes/img.route.js";
 import cors from "cors";
 import path from "path";
+import "./cronjob.js";
 
 dotenv.config({ quiet: true });
 
