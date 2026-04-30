@@ -8,7 +8,7 @@ const useZustand = create((set) => ({
   getAllImages: async () => {
     try {
       const res = await axiosInstance.get("/");
-      set((state) => ({ images: [...state.images, ...res.data] }));
+      set({ images: res.data });
     } catch (error) {
       console.error(error);
     }
